@@ -1,0 +1,105 @@
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.jumbotron .action-call {
+  color: white;
+  position: absolute;
+  z-index: 5;
+  margin-top: 400px;
+}
+
+.carousel {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  margin: 100px auto;
+  border: none;
+}
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+}
+.carousel__image h3 {
+  position: absolute;
+  z-index: 6;
+}
+.carousel__track-container {
+  background: none;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.carousel__button--left {
+  transform: translateX(50px);
+  z-index: 6;
+}
+.carousel__button--right {
+  transform: translateX(-50px);
+}
+.carousel__button img {
+  width: 12px;
+}
+.carousel__button img h2 {
+  z-index: 6;
+}
+.carousel__button--left {
+  color: white;
+  left: -40px;
+}
+.carousel__button--right {
+  color: white;
+  right: -40px;
+}
+.carousel__nav {
+  position: relative;
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.carousel__nav span {
+  display: block;
+}
+.carousel__indicator {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: gray;
+  margin: 0 40px;
+  cursor: pointer;
+}
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+.carousel .is-hidden {
+  display: none;
+}/*# sourceMappingURL=carousel.css.map */

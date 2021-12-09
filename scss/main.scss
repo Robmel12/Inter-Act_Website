@@ -1,0 +1,83 @@
+
+@import 'main-nav';
+@import 'toggle-nav';
+@import 'config';
+@import 'home-nav';
+@import 'carousel';
+
+
+body{
+  color:black;
+  font-family: $main-text-font;
+  margin: 0;
+  a{
+    text-decoration: none;
+    &:visited{
+      color: $tertiary-color;
+    }
+  }
+  .act{
+    color:  #b90d14;
+  }
+}
+.main-content{
+  background: linear-gradient(
+    to bottom, 
+    rgba($primary-color, 1), 
+    rgba($primary-color, .8)
+  ), 
+  url("../images/mountain.jpeg") center top;
+  background-size: cover;
+  padding: 0 30px;
+}
+.date-time{
+  padding-bottom: 20px;
+}
+.table{
+  display: flex;
+  justify-content: center;
+  margin: 50px 20px;
+
+  .content-table{
+    border-collapse: collapse;
+    font-size: 1rem;
+    min-width: 400px;
+    font-weight: bold;
+
+    thead tr{
+      background-color: $quarternary-color;
+      color: $tertiary-color;
+    }
+    tbody tr{
+      font-weight: 400;
+    }
+    th, td {
+      padding: 12px 15px;  
+    }
+    tbody tr td {
+      border-bottom: 1px solid $quarternary-color;
+    }
+  }
+}
+.groups-header{
+  color: $primary-color;
+  background: linear-gradient(
+    to right,
+    rgba($primary-color, .3), 
+    rgba($primary-color, .3));
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 100px;
+  background-color: $secondary-color;
+  border-radius: 15px;
+  box-shadow: 5px 5px 8px rgba($color: #000000, $alpha: .4);
+  h4 {
+    text-align: center;
+  }
+  col {
+    display: flex;
+    flex-direction: column;
+  }
+}

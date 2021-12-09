@@ -1,0 +1,10 @@
+$primary-color:white;
+$secondary-color:red;
+$tertiary-color:#02116f;
+$quarternary-color:rgb(218, 218, 218);
+$main-text-font: Helvetica, sans-serif;
+$searchBar-size: 20px;
+
+@mixin transition-ease {
+  transition: all .5s ease-in-out;
+}

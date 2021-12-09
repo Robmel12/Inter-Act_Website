@@ -1,0 +1,405 @@
+.nav {
+  background-color: #dadada;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 60px;
+}
+.nav .container-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.nav .container-nav .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  padding-bottom: 20px;
+}
+.nav .container-nav .logo a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav .container-nav .logo img {
+  text-align: center;
+  height: 5rem;
+}
+.nav .container-nav .logo h2, .nav .container-nav .logo h3 {
+  font-family: serif;
+  margin: 0;
+  text-align: center;
+}
+.nav .container-nav .logo h2 {
+  font-size: 2rem;
+}
+.nav .container-nav .dashboard {
+  color: #02116f;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex: 1;
+  padding-left: 100px;
+}
+.nav .container-nav h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 30px 0;
+  padding-top: 20px;
+}
+.nav .container-nav .main-nav {
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+}
+.nav .container-nav .main-nav .content {
+  background: color;
+  width: 1vw;
+  padding: 2em;
+  position: relative;
+  transition: width 400ms cubic-bezier(0.18, 0.89, 0.32, 1);
+}
+.nav .container-nav .main-nav .content:focus-within {
+  width: 25vw;
+  transition: width 400ms cubic-bezier(0.18, 0.89, 0.32, 1);
+}
+.nav .container-nav .main-nav .content .search-bar {
+  background: white;
+  border: 2px solid red;
+  display: flex;
+  border-radius: 50px;
+  height: 20px;
+  width: 20px;
+  padding: 3px;
+  position: relative;
+  transition: width 500ms cubic-bezier(0.18, 0.89, 0.32, 1.05);
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.nav .container-nav .main-nav .content .search-bar__input {
+  flex-grow: 1;
+  font-size: 1rem;
+  padding: 0.3em 0.5em;
+  border: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  line-height: calc(20px + 9px);
+  opacity: 0;
+  cursor: pointer;
+}
+.nav .container-nav .main-nav .content .search-bar__input:focus {
+  outline: 0;
+}
+.nav .container-nav .main-nav .content .search-bar__submit {
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  border-radius: 50%;
+  width: calc(20px + 5px);
+  height: calc(20px + 5px);
+  margin-left: auto;
+  transition: background 150ms ease-in-out;
+}
+.nav .container-nav .main-nav .content .search-bar:focus-within {
+  width: 100%;
+}
+.nav .container-nav .main-nav .content .search-bar:focus-within .search-bar__input {
+  opacity: 1;
+  cursor: initial;
+  background: transparent;
+  width: calc(90% - 20px);
+}
+.nav .container-nav .main-nav .content .search-bar:focus-within .search-bar__submit {
+  background: #02116f;
+  color: white;
+}
+.nav .container-nav .main-nav .content .search-bar:focus-within .search-bar__submit:focus, .nav .container-nav .main-nav .content .search-bar:focus-within .search-bar__submit:hover {
+  outline: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+.nav .container-nav .main-nav .social-icons {
+  display: inline;
+  font-size: 1.5rem;
+}
+.nav .container-nav .main-nav .social-icons__link {
+  padding: 0 10px;
+}
+
+.toggle-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  width: 25vw;
+  padding: 0;
+  position: absolute;
+}
+.toggle-nav .arrow {
+  position: fixed;
+  top: 60%;
+  z-index: 4;
+  padding: 5px;
+  transition: all 0.5s ease-in-out;
+}
+.toggle-nav .arrow i {
+  font-size: 30px;
+}
+.toggle-nav .arrow.open {
+  transform: translateX(20vw) rotate(180deg);
+  transition: all 0.5s ease-in-out;
+}
+.toggle-nav .menu-nav {
+  display: flex;
+  box-shadow: 5px 0 8px rgba(0, 0, 0, 0.2);
+  width: 25vw;
+  height: 100vh;
+  position: fixed;
+  transform: translateX(-100%);
+  flex-direction: column;
+  justify-content: space-around;
+  vertical-align: center;
+  z-index: 2;
+  background-color: white;
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+}
+.toggle-nav .menu-nav__item {
+  text-align: center;
+  list-style-type: none;
+  padding: 5vh 0;
+}
+.toggle-nav .menu-nav .logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.toggle-nav .menu-nav .logo img {
+  height: 5rem;
+}
+.toggle-nav .menu-nav .logo h2, .toggle-nav .menu-nav .logo h4 {
+  color: #02116f;
+  font-size: 1rem;
+  margin: 0;
+  padding-left: 5px;
+  font-family: "Times New Roman", Times, serif;
+}
+.toggle-nav .menu-nav .logo h2 {
+  font-size: 2rem;
+}
+.toggle-nav .menu-nav.open {
+  transform: translateX(0);
+  height: 100vh;
+  padding: 0;
+}
+
+.home {
+  margin: 0;
+}
+.home .logo-home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.home .logo-home img {
+  width: 90px;
+}
+.home .logo-home h1, .home .logo-home h3 {
+  margin: 0;
+  padding: 0 10px;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.jumbotron .action-call {
+  color: white;
+  position: absolute;
+  z-index: 5;
+  margin-top: 400px;
+}
+
+.carousel {
+  position: relative;
+  height: 780px;
+  width: 100%;
+  margin: 0;
+  border: none;
+}
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+}
+.carousel__image h3 {
+  position: absolute;
+  z-index: 6;
+}
+.carousel__track-container {
+  background: none;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.carousel__track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 900ms ease-in-out;
+}
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.carousel__button {
+  position: absolute;
+  font-size: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  z-index: 999;
+}
+.carousel__button--left {
+  transform: translateX(50px);
+}
+.carousel__button--right {
+  transform: translateX(-50px);
+}
+.carousel__button img {
+  width: 12px;
+}
+.carousel__button img h2 {
+  z-index: 6;
+}
+.carousel__button--left {
+  color: gray;
+  left: -40px;
+}
+.carousel__button--right {
+  color: gray;
+  right: -40px;
+}
+.carousel__float {
+  position: absolute;
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+}
+.carousel__float--nav {
+  position: relative;
+  background: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  transform: translateY(-30px);
+}
+.carousel__float--nav span {
+  display: block;
+  z-index: 99999;
+}
+.carousel__indicator {
+  position: relative;
+  width: 25px;
+  height: 3px;
+  background-color: lightblue;
+  margin: 0 40px;
+  border-radius: 15%;
+  cursor: pointer;
+}
+.carousel__indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+.carousel .is-hidden {
+  display: none;
+}
+
+body {
+  color: black;
+  font-family: Helvetica, sans-serif;
+  margin: 0;
+}
+body a {
+  text-decoration: none;
+}
+body a:visited {
+  color: #02116f;
+}
+body .act {
+  color: #b90d14;
+}
+
+.main-content {
+  background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0.8)), url("../images/mountain.jpeg") center top;
+  background-size: cover;
+  padding: 0 30px;
+}
+
+.date-time {
+  padding-bottom: 20px;
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+  margin: 50px 20px;
+}
+.table .content-table {
+  border-collapse: collapse;
+  font-size: 1rem;
+  min-width: 400px;
+  font-weight: bold;
+}
+.table .content-table thead tr {
+  background-color: #dadada;
+  color: #02116f;
+}
+.table .content-table tbody tr {
+  font-weight: 400;
+}
+.table .content-table th, .table .content-table td {
+  padding: 12px 15px;
+}
+.table .content-table tbody tr td {
+  border-bottom: 1px solid #dadada;
+}
+
+.groups-header {
+  color: white;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3));
+  font-size: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px 100px;
+  background-color: red;
+  border-radius: 15px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+}
+.groups-header h4 {
+  text-align: center;
+}
+.groups-header col {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=main.css.map */

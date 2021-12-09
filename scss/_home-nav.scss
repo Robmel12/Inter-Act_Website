@@ -1,0 +1,16 @@
+.home {
+  margin: 0;
+.logo-home{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  img{
+  width: 90px
+  }
+  h1, h3{
+    margin:0;
+    padding: 0 10px;
+  }
+}
+}

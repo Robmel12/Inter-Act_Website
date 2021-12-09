@@ -1,0 +1,131 @@
+.jumbotron{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+    .action-call{
+      color: white;
+      position: absolute;
+      z-index: 5;
+      margin-top: 400px;
+      
+      
+    }
+  
+}
+
+.carousel {
+  position:relative;
+  height: 780px;
+  width: 100%;
+  margin: 0;
+  border:none;
+
+  &__image {  
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: none;
+
+    h3{
+      position: absolute;
+      z-index: 6;
+    }
+  }
+  &__track-container{
+    background: none;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  &__track{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 900ms ease-in-out;
+  }
+
+  &__slide {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__button {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 999;
+    &--left{
+      transform: translateX(50px);
+    }
+    &--right{
+      transform: translateX(-50px);
+    }
+
+    img {
+      width: 12px;
+      h2{
+        z-index: 6;
+      }
+    }
+
+    &--left {
+      color: gray;
+      left: -40px;
+    }
+
+    &--right {
+      color: gray;
+      right: -40px;
+    }
+  }
+&__float{
+  position: absolute;
+  display: inline-block;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  &--nav{
+    position: relative;
+    background: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    transform: translateY(-30px);
+
+    span{
+      display: block;
+      z-index: 99999; 
+    }
+  }
+}
+  &__indicator{
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background-color: lightblue;
+    margin: 0 40px;
+    border-radius: 15%;
+    cursor: pointer;
+
+    &.current-slide {
+      background:rgba($color: #000000, $alpha: .75) ;
+    }
+  }
+  .is-hidden {
+    display: none;
+  }
+
+}
