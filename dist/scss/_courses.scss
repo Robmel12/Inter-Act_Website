@@ -1,0 +1,120 @@
+.courses-container{
+ background: $tertiary-color;
+ 
+ //courses main settings
+  .courses{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, rgba(black, .4),rgba(black, .4)), url('/dist/images/bg.jpg') center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    text-align: center;clip-path: ellipse(99% 50% at 86% 50%);
+    
+    .free-demo{
+      margin-top: 30px;
+      position: relative;
+      align-self: center;
+    }
+
+  
+  //courses section title
+    .title-courses{
+      opacity: 0;
+      background: rgba(16, 178, 16, .9);
+      position: relative;
+      margin-top: 150px;
+      margin-bottom: 20px;
+      transform:  translateX(-200px);
+      transition: 300ms ease-in-out;
+      color: white;
+      font-size: 5rem;
+      z-index: 6;
+      
+      
+      &.active{
+        opacity: 1;
+        transform:  translateX(0);
+        transition: 300ms ease-in-out;
+        
+        
+      }
+      
+    } 
+  //animated cards
+  .courses-cards{
+    width: 70%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    padding-bottom: 100px;
+    line-height: 1.5;
+    margin-top: 10px;
+    color: $tertiary-color;
+
+    .course {
+      i{
+        font-size: 2rem;
+      }
+      h4{
+        margin-top: 10px;
+  
+      }
+    }
+    
+    //right moving cards
+    .courses-right{
+      opacity: 0;
+      display: inline-block;
+      background: $quarternary-color;
+      width: 200px;
+      height: 300px;
+      border-radius: 10%;
+      transform: translateX(200px);
+      box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: .5);
+      
+
+
+      &.active{
+        opacity: 1;
+        transform: translateX(0);
+        transition: .5s ease-in-out;
+
+      }
+      
+    }
+    //left moving cards
+    .courses-left{
+      opacity: 0;
+      display: inline-block;
+      background: $quarternary-color;
+      width: 200px;
+      height: 300px;
+      border-radius: 10%;
+      transform: translateX(-200px);
+      box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: .5);
+
+      &.active{
+        opacity: 1;
+        transform: translateX(0);
+        transition: .5s ease-in-out;
+
+      }
+
+
+    }
+  }
+
+  }
+}
+//transition delay staggered
+@for $i from 1 through 6 {
+  #courses-#{$i}{
+    transition-delay: ($i * 0.1s) + .2s;
+  }
+}

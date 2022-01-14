@@ -1,8 +1,12 @@
+@import 'include-media';
 $primary-color:white;
-$secondary-color:red;
+$secondary-color:#b90d14;
+
 $tertiary-color:#02116f;
-$quarternary-color:rgb(218, 218, 218);
+$tertiary-color-light: #4e5a9b;
+$quarternary-color:rgb(234, 234, 234);
 $main-text-font: Helvetica, sans-serif;
+$inter-act-font: 'Times New Roman', Times, serif;
 $searchBar-size: 20px;
 
 @mixin transition-ease {

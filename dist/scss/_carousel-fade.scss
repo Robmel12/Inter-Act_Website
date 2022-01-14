@@ -1,0 +1,330 @@
+
+.home
+{
+  .free-demo{
+    &.jumbo{
+    position: absolute;
+    right: 100px;
+    bottom: -30px;
+    z-index: 6;
+    }
+  }
+  //jumbotron image
+  .jumbotron{
+  height: 100vh;
+  width: 100vw;
+  background: $tertiary-color;
+  
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+//carousel basic settings
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 3;
+  border: none;
+ 
+  
+}
+//slider settings
+.slider{
+  width: 100vw;
+  height: 100vh;
+
+  section{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $tertiary-color;
+    opacity: 0;
+    transition: all 2s ease-in-out;
+    background: $tertiary-color;
+  //captions
+    .pic-caption{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      font-size: 3.5vh;
+      background: rgba(16, 178, 16, .9);
+      border-radius: 50%;
+      .title{
+        img{
+          height: 2em;
+          width: 2em;
+        }
+        .tag {
+          color: $tertiary-color;
+        }
+        h2{
+          text-align: center;
+        }
+      }
+    }
+  
+  }
+  //slide 1
+  section:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 20%);
+    position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+      45deg,
+      rgba(black, .5 ), 
+      rgba(white, .1)
+    ), 
+    url("/dist/images/pexels-kampus-production-5940837.jpg") center;
+    background-size: cover;
+    opacity: 1;
+    clip-path: ellipse(100% 73% at 8% 27%);
+    border: none;
+  
+    .pic-caption{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      grid-column: 2/5;
+      grid-row: 1/4;
+    }
+
+    
+  
+  }
+
+  section:nth-child(2) {
+    display: grid;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: repeat(5, 20%);
+   width: 100%;
+       height: 100%;
+       background: linear-gradient(
+         to left, 
+         rgba(black, .75), 
+         rgba(black, 0)
+       ), 
+       url("/dist/images/pexels-burst-374074.jpg") center;
+       background-size: cover;
+       opacity: 0;
+       z-index: 0;
+       clip-path: ellipse(100% 73% at 8% 27%);
+       border: none;
+       
+       .pic-caption{
+         
+         color: white;
+         grid-column: 8/11;
+         grid-row: 2/5;
+       }
+ 
+ }
+
+ section:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  video{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: .8;
+    object-fit: cover;
+    border: none;
+    clip-path: ellipse(100% 73% at 8% 27%);
+  }
+  
+
+  .pic-caption{
+    position: absolute;
+    top: 200px;
+    left: 80px;
+ 
+    color: white;
+   
+}
+
+}
+
+}
+
+
+.next{
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  z-index: 2;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &.is-hidden{
+    display: none;
+  }
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  z-index: 2;
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  &.is-hidden{
+    display: none;
+  }
+  
+
+}
+
+
+
+
+.icon-card{
+  width: 100vw;
+  padding: 50px 0;
+display: flex;
+flex-direction: row;
+justify-content: center;
+justify-content: space-evenly;
+flex-wrap: wrap;
+font-size: 1.5rem;
+color: $tertiary-color;
+background: $tertiary-color;
+
+//icon size min vp width (1060px)
+
+}
+
+
+
+.message{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.25rem;
+  position: absolute;
+  visibility: none;
+  opacity: 0;
+  transform:translate(0);
+  
+  
+
+  &.active{
+    background: rgba($color: #000000, $alpha: .5);
+  transform: scale(1);
+  visibility: visible;
+  height: 250px;
+  width: 250px;
+  transition: 300ms ease-in-out;
+  color: white;
+  transform: translate(0, -250px);
+  border-radius: 10%;
+  opacity: 1;
+  }
+}
+
+
+
+  .card-style{
+    transform: scale(1);
+    transition: 300ms ease-in-out;
+    &:hover{
+      box-shadow: 3px 3px 10px rgba(white , $alpha: .8);
+      cursor: pointer;
+      transition: 300ms ease-in-out;
+    }
+    
+
+    &.deactivate{
+    
+    transform: translate(-125px, 150px) scale(0.25);
+    transition: 300ms ease-in-out;
+      
+    }
+      }
+  .card1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    background: $quarternary-color;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgba(black  , $alpha: .8);
+  }
+  
+  .card2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    background: $quarternary-color;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgba(black  , $alpha: .8);
+color: $tertiary-color;
+  }
+  .card3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: $quarternary-color;
+    box-shadow: 3px 3px 5px rgba(black  , $alpha: .8);
+  }
+    
+  
+  .card4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    background: $quarternary-color;
+    color: $tertiary-color;
+    border-radius: 50%;
+    box-shadow: 3px 3px 5px rgba(black  , $alpha: .8);
+  }
+  
+  .card5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    z-index: 3;
+
+}
+}

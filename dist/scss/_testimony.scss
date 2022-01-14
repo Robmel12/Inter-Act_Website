@@ -1,0 +1,87 @@
+
+//Section Title
+.testimony-title{
+  background:rgba(16, 178, 16, .9);;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  h2{
+    padding: 20px;
+  }
+}
+//testimony section
+.testimonies{
+  display: flex;
+  flex-direction: row;
+  background: $tertiary-color;
+  justify-content: space-around;
+  color: black;
+  width: 100%;
+  height: 700px;
+//testimonies
+  .testimony-container{
+    width: 30%;
+    .testimony{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &.one{
+      display: flex;
+      justify-content: center;
+      .testimony{
+        background: white;
+        width: 70%;
+        height: 30%;
+        box-shadow: -30px -30px 1px 1px rgba(green, $alpha: 1.0);
+        padding: 20px;
+        transform: translateY(100px);
+        
+        
+      }
+
+      
+
+  
+  }
+    &.two{
+      display: flex;
+      justify-content: center;
+      .testimony{
+        align-self: end;
+        background: white;
+        width: 70%;
+        height: 30%;
+        box-shadow: -30px -30px 1px 1px rgba(green, $alpha: 1.0);
+        padding: 20px;
+        transform: translateY(-100px);
+      }
+
+      
+
+  
+  }
+    &.three{
+      display: flex;
+      justify-content: center;
+      
+      .testimony{
+        align-self: center;
+        background: white;
+        width: 70%;
+        height: 30%;
+        box-shadow: -30px -30px 1px 1px rgba(green, $alpha: 1.0);
+        padding: 20px; 
+        transform: translateY(-20px);
+        
+      }
+
+      
+
+  
+  }
+
+
+
+  }
+  }
