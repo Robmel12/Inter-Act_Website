@@ -11,7 +11,8 @@ const slides = Array.from(slider.children);
 
 let sectionIndex = 0;
 
-
+/**on load set index 0 opacity to one */
+slides[0].style.opacity = 1;
 
 function reset() {
   for (let i = 0; i < slider.children.length; i ++){
@@ -55,17 +56,40 @@ prev.addEventListener('click', function() {
  
 
 });
+let counter = 1;
+
+setInterval(()=>{
+  if(counter > slides.length-1){
+    reset();
+    sectionIndex = 0;
+    counter = 1;
+    slides[0].style.opacity =1;
+    hideShowArrows(prev, next, slides, sectionIndex);
+    
+  }else{
+    reset();
+ sectionIndex = sectionIndex < slides.length - 1 ? sectionIndex + 1 : slides.length-1;
+ slider.children[sectionIndex].style.opacity = 1;
+ const nextSlide = sectionIndex;
+ hideShowArrows(prev, next, slides, nextSlide);
+ counter ++;
+}
+ 
+
+}, 8000);
+
 //carousel card message animation
 const cardStyle =  document.querySelectorAll('.card-style');
 const cardMessage = document.querySelectorAll('.message');
+const placeholder = document.querySelectorAll('.placeholder');
 
 for(let i =0; i < cardStyle.length; i++){
 
-  cardStyle[i].addEventListener( 'click', ()=>{
+  placeholder[i].addEventListener( 'mouseenter', ()=>{
     cardMessage[i].classList.add('active');
     cardStyle[i].classList.add('deactivate');
   });
-  cardMessage[i].addEventListener('click', ()=>{
+  cardMessage[i].addEventListener('mouseleave', ()=>{
     cardMessage[i].classList.remove('active');
     cardStyle[i].classList.remove('deactivate');
   })

@@ -39,8 +39,6 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,32 +73,32 @@
   }
   //slide 1
   section:nth-child(1) {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(5, 20%);
-    position: absolute;
+    display: flex;
+    flex-direction: column;
         width: 100%;
         height: 100%;
-        background: linear-gradient(
-      45deg,
-      rgba(black, .5 ), 
-      rgba(white, .1)
-    ), 
-    url("../images/teacher.jpg") center;
-    background-size: cover;
-    opacity: 1;
-    clip-path: ellipse(100% 73% at 8% 27%);
-    border: none;
+        
+        video{
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          margin: 0;
+          opacity: .8;
+          object-fit: cover;
+          border: none;
+          clip-path: ellipse(100% 73% at 8% 27%);
+        }
   
-    .pic-caption{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      grid-column: 2/5;
-      grid-row: 1/4;
-    }
+        .pic-caption{
+          position: absolute;
+          top: 200px;
+          left: 80px;
+       
+          color: white;
+         
+      }
 
     
   
@@ -223,22 +221,21 @@ background: $tertiary-color;
 
 
 .message{
-  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   font-size: 1.25rem;
   position: absolute;
-  visibility: none;
+  display: none;
   opacity: 0;
   transform:translate(0);
   
   
 
   &.active{
+    display: flex;
     background: rgba($color: #000000, $alpha: .5);
   transform: scale(1);
-  visibility: visible;
   height: 250px;
   width: 250px;
   transition: 300ms ease-in-out;

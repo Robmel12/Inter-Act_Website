@@ -326,8 +326,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,27 +355,30 @@
   text-align: center;
 }
 .home .slider section:nth-child(1) {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(5, 20%);
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1)), url("../images/teacher.jpg") center;
-  background-size: cover;
-  opacity: 1;
-  -webkit-clip-path: ellipse(100% 73% at 8% 27%);
-          clip-path: ellipse(100% 73% at 8% 27%);
-  border: none;
-}
-.home .slider section:nth-child(1) .pic-caption {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.home .slider section:nth-child(1) video {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  opacity: 0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: none;
+  -webkit-clip-path: ellipse(100% 73% at 8% 27%);
+          clip-path: ellipse(100% 73% at 8% 27%);
+}
+.home .slider section:nth-child(1) .pic-caption {
+  position: absolute;
+  top: 200px;
+  left: 80px;
   color: white;
-  grid-column: 2/5;
-  grid-row: 1/4;
 }
 .home .slider section:nth-child(2) {
   display: grid;
@@ -465,20 +466,19 @@
   background: #02116f;
 }
 .home .message {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   font-size: 1.25rem;
   position: absolute;
-  visibility: none;
+  display: none;
   opacity: 0;
   transform: translate(0);
 }
 .home .message.active {
+  display: flex;
   background: rgba(0, 0, 0, 0.5);
   transform: scale(1);
-  visibility: visible;
   height: 250px;
   width: 250px;
   transition: 300ms ease-in-out;
