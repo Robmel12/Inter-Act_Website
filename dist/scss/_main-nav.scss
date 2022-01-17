@@ -5,7 +5,7 @@
   width: 100%;
   background-color: $quarternary-color;
   z-index: 7;
-  opacity: 0;
+  opacity: 1;
   transition: 300ms ease-in-out;
   &:hover{
     opacity: 1;
@@ -27,9 +27,10 @@
   } 
 
 .toggle{
+  flex: 2;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 .main-nav{
   display: flex;
