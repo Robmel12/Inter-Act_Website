@@ -922,6 +922,9 @@ html a, body a {
 html a:visited, body a:visited {
   color: #02116f;
 }
+html a:link, body a:link {
+  color: #02116f;
+}
 html h1, html h2, html h3, html h4, html h5, html h6, body h1, body h2, body h3, body h4, body h5, body h6 {
   margin: 0;
 }
