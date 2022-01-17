@@ -481,7 +481,7 @@
   transform: scale(1);
   height: 250px;
   width: 250px;
-  transition: 300ms ease-in-out;
+  transition: 500ms ease-in-out;
   color: white;
   transform: translate(0, -250px);
   border-radius: 10%;
@@ -489,16 +489,16 @@
 }
 .home .card-style {
   transform: scale(1);
-  transition: 300ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 .home .card-style:hover {
   box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.8);
   cursor: pointer;
-  transition: 300ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 .home .card-style.deactivate {
   transform: translate(-125px, 150px) scale(0.25);
-  transition: 300ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 .home .card1 {
   display: flex;
