@@ -86,7 +86,7 @@
       rgba(black, .5 ), 
       rgba(white, .1)
     ), 
-    url("../dist/images/teacher.jpg") center;
+    url("../images/teacher.jpg") center;
     background-size: cover;
     opacity: 1;
     clip-path: ellipse(100% 73% at 8% 27%);
@@ -117,7 +117,7 @@
          rgba(black, .75), 
          rgba(black, 0)
        ), 
-       url("../dist/images/laptop.jpg") center;
+       url("../images/laptop.jpg") center;
        background-size: cover;
        opacity: 0;
        z-index: 0;
