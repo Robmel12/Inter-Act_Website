@@ -164,10 +164,9 @@ html,body{
   
   .home .slider section:nth-child(1){
     .pic-caption{
-      margin-top: 50px;
-       grid-column: 3/11;
-      grid-row: 1/4;
-      align-self: flex-start;
+      top: 50px;
+      width: 100%;
+      left: 0;
     }
   }
   .home .slider section:nth-child(2){
@@ -197,6 +196,9 @@ html,body{
 
 
 @include sm {
+  .icon-card{
+    flex-direction: column;
+  }
   .nav.home{
     .logo-home{
       width: 100%;
@@ -282,9 +284,9 @@ html,body{
   //slider caption top
   .home .slider section:nth-child(1){
     .pic-caption{
-      margin-top: 50px;
-      grid-column: 3/11;
-      align-self: flex-start;
+      top: 50px;
+      width: 60%;
+      left: auto;
     }
   }
   .home .slider section:nth-child(2){
@@ -360,6 +362,9 @@ html,body{
 
 
 @include xs {
+  .home .icon-cards{
+    flex-direction: column;
+  }
   .nav.home{
     .logo-home{
       width: 100%;
@@ -434,9 +439,9 @@ html,body{
   }
   .home .slider section:nth-child(1){
     .pic-caption{
-      margin-top: 50px;
-      grid-column: 1/13;
-      align-self: flex-start;
+      top: 5px;
+      width: 96%;
+      left: 0;
     }
   }
   .home .slider section:nth-child(2){
@@ -450,7 +455,7 @@ html,body{
   .home .slider section:nth-child(3){
     .pic-caption{
       top: 50px;
-      width: 100%;
+      width: 96%;
       left: 0;
     }
   }

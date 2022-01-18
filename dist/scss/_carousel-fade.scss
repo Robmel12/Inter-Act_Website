@@ -203,12 +203,15 @@
 
 
 .icon-card{
+  height: 100%;
   width: 100vw;
   padding: 50px 0;
 display: flex;
 flex-direction: row;
+gap: 30px;
 justify-content: center;
-justify-content: space-evenly;
+align-items: center;
+
 flex-wrap: wrap;
 font-size: 1.5rem;
 color: $tertiary-color;
@@ -249,6 +252,7 @@ background: $tertiary-color;
 
 
   .card-style{
+    height: 100%;
     transform: scale(1);
     transition: 500ms ease-in-out;
     &:hover{
@@ -315,13 +319,4 @@ color: $tertiary-color;
     box-shadow: 3px 3px 5px rgba(black  , $alpha: .8);
   }
   
-  .card5{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    z-index: 3;
-
-}
 }
